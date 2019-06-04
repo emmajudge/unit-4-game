@@ -1,12 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <title>Crystal Collectors</title>
+
+  <!-- what is the correct order for linking Bootstrap (library and fonts), style.css, reset.css and then javascript/jQuery..? -->
+  <!-- Bootstrap CSS CDN  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+
+<!-- Font Awesome CSS Icons (For cool glyphicons) -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+<!-- jQuery JS -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="assets/css/reset.css">
+<link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 <body>
-    
-</body>
-</html>
+        <h1>Crystal Counter<span id="header"></span></h1>
+
+        <div id="instructions">
+            </div> 
+
+  <h2>Number to Guess: <span id="number-to-guess"></span></h2>
+  <h2>Win - Loss Counter: <span id="win-loss-count"></span></h2>
+
+  <!-- Note that this div is now empty. We will fill it dynamically -->
+  <div id="crystals">
+    </div>
+
+  <div id="current-score">
+    </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/javascript/game.js"></script>
+
+  </body>
+  </html>
