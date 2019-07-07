@@ -1,23 +1,22 @@
 //NOTE: code below was copied from in class activity (week 4, activity 12 -- file: 12.html)
 //used the solution/activity noted above as a template to get started but will customize and make adjustments so it is not
-//just a copy/paste. Still working to create original code but for now (as of 6/4/19) the it is mainly borrowed/copied
+//just a copy/paste. Still working to create original code but for now (as of 6/4/19) it is mainly borrowed/copied
 
 
-//EMMA -----------   change to random number between 19 - 120.
-  var targetNumber = 53;
+//computer selects a random number from 19-120, this is the user's "target number"
+  var targetNumber = Math.floor(Math.random() * 101) + 19;
+console.log(targetNumber);
 
+//adds the random number generated above to the div called number-to-guess so user knows their target
   $("#number-to-guess").text(targetNumber);
 
+  //initialize the counter variable which we will update as user clicks cyrstals w/ diff values
   var counter = 0;
 
-  // Now for the hard part. Creating multiple crystals each with their own unique number value.
-
-  // We begin by expanding our array to include four options.
   //EMMA -----------  change to random hidden value between 1 - 12. Maybe here we just initialize since it's not an array..?
-  var numberOptions = [10, 5, 3, 7];
-
   // Next we create a for loop to create crystals for every numberOption.
-  for (var i = 0; i < numberOptions.length; i++) {
+  for (var i = 0; i < 4; i++) {
+    var randomNumber = Math.ceil(Math.random() * 11 ) + 1
 
     // For each iteration, we will create an imageCrystal
     var imageCrystal = $("<img>");
@@ -33,7 +32,7 @@
     // Each imageCrystal will be given a data attribute called data-crystalValue.
     // This data attribute will be set equal to the array value.
     //EMMA -----------  change to random hidden value between 1 - 12.
-    imageCrystal.attr("data-crystalvalue", numberOptions[i]);
+    imageCrystal.attr("data-crystalvalue", randomNumber);
 
     // Lastly, each crystal image (with all it classes and attributes) will get added to the page.
     $("#crystals").append(imageCrystal);
