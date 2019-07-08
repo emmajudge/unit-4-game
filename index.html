@@ -1,39 +1,91 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Crystal Collectors</title>
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Bootstrap
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-  <!-- what is the correct order for linking Bootstrap (library and fonts), style.css, reset.css and then javascript/jQuery..? -->
-  <!-- Bootstrap CSS CDN  -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+  jQuery JS
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script> -->
 
-<!-- Font Awesome CSS Icons (For cool glyphicons) -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
-<!-- jQuery JS -->
-<script src="https://code.jquery.com/jquery.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
-<link rel="stylesheet" href="assets/css/reset.css">
-<link rel="stylesheet" href="assets/css/style.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!-- Linking CSS -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- Linking jQuery -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<!-- Linking Google Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab|Yellowtail' rel='stylesheet' type='text/css'>
+
 
 </head>
+
 <body>
-        <h1>Crystal Counter<span id="header"></span></h1>
+  <div class="header">
+    <h1>Crystals Collector</h1>
+  </div>
 
-        <div id="instructions">
-            </div> 
+  <div class="container">
+    <div id="instructions">
+      <h2>Instructions</h2>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pellentesque, erat in tempor pretium, quam lectus
+      dignissim lectus, et dapibus purus quam sit amet metus. Vivamus sed tortor nisl.
+      <hr>
+      Proin quis diam bibendum, convallis ante at, euismod urna. Donec placerat tempor augue sit amet vulputate.
+      Praesent et massa augue. Suspendisse velit neque, blandit eget urna a, sodales
+      <hr>
+      Duis ut tellus in nisl ultricies sodales. Nam faucibus sodales tincidunt. In a viverra neque. Maecenas elementum
+      nec odio id consectetur. Morbi tempor, sem non ultrices vulputate, turpis odio
+    </div>
+  </div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 text-center">
+        <div class="panel panel-primary">
+          <div class="panel-heading">Number to Guess:</div>
+          <div class="panel-body">
+              <br>
+            <div id="number-to-guess">
+                
+            </div>
+            <br>
+          </div>
+        </div>
+      </div>
 
-  <h2>Number to Guess: <span id="number-to-guess"></span></h2>
-  <h2>Win - Loss Counter: <span id="win-loss-count"></span></h2>
+    <div class="col-sm-6">
+      <div class="panel panel-primary">
+        <div class="panel-heading">Win - Loss Counter</div>
+        <div class="panel-body">
+          <div id="win-count">
+            Wins:
+          </div>
+          <br>
+          <div id="loss-count">
+            Losses:
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Note that this div is now empty. We will fill it dynamically -->
-  <div id="crystals">
+    <div id="crystals">
     </div>
 
-  <div id="current-score">
+    <div id="current-score">
     </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="assets/javascript/game.js"></script>
 
-  </body>
-  </html>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/game.js"></script>
+
+</body>
+
+</html>
